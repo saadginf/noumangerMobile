@@ -1,13 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import colors from "./app/config/colors";
-import Login from "./app/screens/Welcome";
+import { NavigationContainer } from "@react-navigation/native";
+import AuthNavigator from "./app/navigation/AuthNavigator";
 
 export default function App() {
   return (
     <>
-      <StatusBar backgroundColor={colors.primary} barStyle="light-content" />
-      <Login />
+      <NavigationContainer>
+        <AuthNavigator />
+      </NavigationContainer>
     </>
   );
 }

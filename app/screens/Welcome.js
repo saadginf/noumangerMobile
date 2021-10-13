@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import Text from "../components/Text";
 import colors from "../config/colors";
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   return (
     <View style={styles.welcome}>
       <Image source={require("../assets/welcome.png")} style={styles.stretch} />
@@ -17,8 +17,15 @@ const Welcome = () => {
           colorBg="secondary"
           colorTx="primary"
           width="45%"
+          onPress={() => navigation.navigate("login")}
         />
-        <Button title="Sign Up" colorBg="white" colorTx="primary" width="45%" />
+        <Button
+          title="Sign Up"
+          colorBg="white"
+          colorTx="primary"
+          width="45%"
+          onPress={() => navigation.navigate("registration")}
+        />
       </View>
     </View>
   );

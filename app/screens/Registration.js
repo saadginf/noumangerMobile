@@ -8,11 +8,11 @@ import Text from "../components/Text";
 import colors from "../config/colors";
 import AppButton from "../components/Button";
 
-const Login = ({ navigation }) => {
+const Registration = () => {
   return (
     <View style={styles.login}>
       <View style={styles.welcomeHeader}>
-        <TouchableOpacity onPress={() => navigation.navigate("welcome")}>
+        <TouchableOpacity>
           <MaterialCommunityIcons
             name="keyboard-return"
             size={60}
@@ -20,26 +20,25 @@ const Login = ({ navigation }) => {
             style={styles.icon}
           />
         </TouchableOpacity>
-        <Text style={styles.title}>Let's sign you in.</Text>
-        <Text style={styles.sub}>Welcome back.</Text>
-        <Text style={styles.sub}>You've been missed!.</Text>
+
+        <Text style={styles.sub}>Welcome To PManager.</Text>
+        <Text style={styles.sub}>
+          You will have such a wonderful Experience!.
+        </Text>
       </View>
       <View style={styles.inputs}>
         <TextInput placeholder="Email Or Username" width="95%" icon="email" />
         <TextInput placeholder="Password" width="95%" icon="lock" />
+        <TextInput placeholder="Confirm Password" width="95%" icon="lock" />
       </View>
       <View style={styles.inputs}>
-        <Text>Don't Have an account?</Text>
-        <TouchableOpacity>
-          <Text style={styles.register}> Register.</Text>
-        </TouchableOpacity>
-        <AppButton title="Sign In" colorBg="white" colorTx="primary" />
+        <AppButton title="Sign Up" colorBg="white" colorTx="primary" />
       </View>
     </View>
   );
 };
 
-export default Login;
+export default Registration;
 
 const styles = StyleSheet.create({
   login: {
